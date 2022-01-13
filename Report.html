@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-01-13 Thu 23:22 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Abhijit Paul" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="outline-container-orgfd39760" class="outline-2">
+<h2 id="orgfd39760"><span class="section-number-2">1</span> Heating Energy consumption and Correlates</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+In this Internship project, we conduct analysis on data collected from the many buildings on its construction date, yearly bill on Heating System and its geographical location.<br />
+</p>
+</div>
+<div id="outline-container-orgac342b3" class="outline-3">
+<h3 id="orgac342b3"><span class="section-number-3">1.1</span> Acknowledgement</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+I would like to thank softanbees for helping me learn and understand each basic aspect of data science and working with python.<br />
+I would like to extend my gratitude to Tamanna Ma'am for giving me the opportunity to work under her and for guiding me through the entire internship from the initial stage. I would also like to thank  Tanvir sir for teaching the basic contents, and Surya sir for keeping us on track everyday on the course basics and assignments. Thank you for the support and encouragement throughout the course and internship.<br />
+</p>
+
+<div class="figure">
+<p><img src="coding-object.png" alt="coding-object.png" /><br />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org4443358" class="outline-3">
+<h3 id="org4443358"><span class="section-number-3">1.2</span> Introduction</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+The project deals with Heating Energy Consumption and its correlates e.g. Climate change over the years, geographical position, building type etc. We collected the dataset from our mentor Tamanna Ma'am and converted it to our convenience. We included extensive data cleaning and curating because our bottleneck here was not dimensionality of the dataset, rather its sheer size. So proper data cleaning and curating can give a good result later on.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orge28c422" class="outline-3">
+<h3 id="orge28c422"><span class="section-number-3">1.3</span> Data Collection</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+The data was collected by <code>Coding Objects</code> and provided to us by Tamanna Ma'am. The dataset has 45943 rows and 94 features. The data is in Excel format so we need to read the data appropriately.<br />
+One thing to notice that we have a lot of data so dropping some rows with repetitive empty cells is a good idea.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org8e34d80" class="outline-3">
+<h3 id="org8e34d80"><span class="section-number-3">1.4</span> Data Cleaning</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+Looking at the data, we noticed some garbage values.<br />
+</p>
+<ul class="org-ul">
+<li>vtj<sub>prt</sub><br /></li>
+<li>gmlid<br /></li>
+</ul>
+<p>
+So we drop these features. Then we noticed many cells with <code>not_calculated</code> values. We replace this string with <code>NaN</code> so that we can deal with them using standard pandas functions. Then we performed a <code>missingno</code> visualization to see if the missing values are common in same rows.<br />
+<img src="missing-no.png" alt="missing-no.png" /><br />
+And they indeed are! So we simply dropped the few 698 missing value rows.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgb1f1ba2" class="outline-3">
+<h3 id="orgb1f1ba2"><span class="section-number-3">1.5</span> EDA</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+Feature Overview to find our target feature.<br />
+</p>
+<ul class="org-ul">
+<li>DHW = Domestic hot water for all monthes in 2020 (12+1 features)<br /></li>
+<li>2020, 2025, 2030, 2035, 2040, 2045, 2050 = 7*13 = 91<br /></li>
+<li>longitutde, latitude, year = 3<br /></li>
+<li>dropped unambiguous features = 2<br /></li>
+</ul>
+<p>
+So total = 96<br />
+</p>
+</div>
+<div id="outline-container-orgf9892ac" class="outline-4">
+<h4 id="orgf9892ac"><span class="section-number-4">1.5.1</span> Finding Target Feature</h4>
+<div class="outline-text-4" id="text-1-5-1">
+</div>
+<ol class="org-ol">
+<li><a id="org07fb717"></a>Location<br />
+<div class="outline-text-5" id="text-1-5-1-1">
+<p>
+So all data has different logitude, so each row correspondents to individual building.<br />
+From google map, we saw that, buildings that are in same area, should have same three digits.<br />
+23.450023, 61.23245<br />
+23.423441, 61.24412<br />
+They are in the same area.<br />
+So we can assign area to each building and see which area has higher energy consumption over the years.<br />
+</p>
+</div>
+</li>
+<li><a id="org144f054"></a>Change in Seasons and Global Warming<br />
+<div class="outline-text-5" id="text-1-5-1-2">
+<p>
+We also notice years. We can use year 2020 and find out season where there were more energy consumptions. Then we can check if it remains consistent around all the years. A decrease in heat consumption indicated global warming. We can do a Chi-square test to see if the temperatures remain same in all seasons on these years.<br />
+</p>
+</div>
+</li>
+<li><a id="org4851913"></a>Year of Construction<br />
+<div class="outline-text-5" id="text-1-5-1-3">
+<p>
+The year a building was constructed has a nice correlation with its energy consumption.<br />
+</p>
+
+<div class="figure">
+<p><img src="eda-1.png" alt="eda-1.png" /><br />
+</p>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org8b56623" class="outline-3">
+<h3 id="org8b56623"><span class="section-number-3">1.6</span> Feature Engineering</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+In this stage, we fix our raw features before using them to build a model.<br />
+</p>
+</div>
+<div id="outline-container-org2ba3f75" class="outline-4">
+<h4 id="org2ba3f75"><span class="section-number-4">1.6.1</span> Defining Target Feature</h4>
+<div class="outline-text-4" id="text-1-6-1">
+<p>
+So we have years from (1724 to 2020).<br />
+We will mark -<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-text">(1701-1800): Historical Monuments - 0
+(1801-1900): Colonist Period Buildings - 1
+(1901-1950): World War Era Buildings - 2
+(1951-1990): Industrial Age Buildings - 3
+(1991-2005): Modern Buildings - 4
+(2006-2015): Recent Buildings - 5
+(2016-2020): New Buildings - 6
+</pre>
+</div>
+<p>
+With this, We build a new feature called <code>building_genre</code>. This is our target feature.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgb36adcd" class="outline-4">
+<h4 id="orgb36adcd"><span class="section-number-4">1.6.2</span> Type Conversion</h4>
+<div class="outline-text-4" id="text-1-6-2">
+<p>
+As we will be using the dataset later on model building, we wish to convert all datatypes into pandas datatypes. So we first see what types of features we have.<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-text">{dtype('int64'), dtype('float64'), dtype('O')}
+</pre>
+</div>
+<p>
+We convert the <code>Object</code> datatype so something more usable - in our case, integer.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org65382e7" class="outline-4">
+<h4 id="org65382e7"><span class="section-number-4">1.6.3</span> Correlation</h4>
+<div class="outline-text-4" id="text-1-6-3">
+<p>
+We plot the correlation of target feature with other features.<br />
+</p>
+<p>
+<img src="corr-plot.png" alt="corr-plot.png" /><br />
+We notice that geographical location has comparatively better correlation with building genre.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org704fb85" class="outline-4">
+<h4 id="org704fb85"><span class="section-number-4">1.6.4</span> Outliers</h4>
+<div class="outline-text-4" id="text-1-6-4">
+<p>
+Outliers negatively impact a lot of models so we first trim and cap the outliers. We use extensive visualization to make sure the procedure is as intended and we did not trim or cap any naturally skewed dataset.<br />
+<img src="trim-cap.png" alt="trim-cap.png" /><br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgd7f0b45" class="outline-4">
+<h4 id="orgd7f0b45"><span class="section-number-4">1.6.5</span> Dealing with Highly Correlated Features</h4>
+<div class="outline-text-4" id="text-1-6-5">
+<p>
+If a feature has high correlation with another feature, then just one of those features is enough to represent the data. We found these highly correlated features.<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-text">{'CC_2025_Total_Yearly_Heat_DHW_demand',
+ 'CC_2030_Total_Yearly_Heat_DHW_demand',
+ 'CC_2035_Total_Yearly_Heat_DHW_demand',
+ 'CC_2040_Total_Yearly_Heat_DHW_demand',
+ 'CC_2045_Total_Yearly_Heat_DHW_demand',
+ 'CC_2050_Total_Yearly_Heat_DHW_demand'}
+</pre>
+</div>
+<p>
+And its intuitive - the sum of monthly power consumption does represent yearly power consumption. So we drop them.<br />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgafe8c80" class="outline-3">
+<h3 id="orgafe8c80"><span class="section-number-3">1.7</span> Model Implementation</h3>
+<div class="outline-text-3" id="text-1-7">
+<p>
+We split the dataset in test and train dataset. We first train the model, in our case, logistic regression model using the train dataset and validate it using test dataset. We do a 80:20 split of data as we have huge amount of data.<br />
+<img src="confusion-matrix.png" alt="confusion-matrix.png" /><br />
+</p>
+</div>
+</div>
+<div id="outline-container-org8e435e0" class="outline-3">
+<h3 id="org8e435e0"><span class="section-number-3">1.8</span> Conclusion</h3>
+<div class="outline-text-3" id="text-1-8">
+<p>
+We notice that building genre has a great correlation with its geographical correlation and also, energy consumption. It drives us to the following suggestions.<br />
+</p>
+<ul class="org-ul">
+<li>The old model buildings seem to have inefficient Heating systems that results in a lot of power-loss. So we suggest to update them.<br /></li>
+<li>The building's geographic location does correlate with its state. So identifying regions with most frequent old buildings and renovating their heating system is a good approach.<br /></li>
+<li>Highly correlated features made this data analysis pretty self-explanatory.<br /></li>
+</ul>
+
+<div class="figure">
+<p><img src="pca.png" alt="pca.png" /><br />
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org87f20c2" class="outline-2">
+<h2 id="org87f20c2"><span class="section-number-2">2</span> Future Outlooks</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Due to limited computer resource, Extensive visualization and more complex models were not introduced. However, the two other possible target features leaves many interesting outlooks for future.<br />
+</p>
+<ul class="org-ul">
+<li>Power Consumption and Geographical Location<br /></li>
+<li>Change in Season on particular region and Climate Change<br /></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Abhijit Paul</p>
+<p class="date">Created: 2022-01-13 Thu 23:22</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
